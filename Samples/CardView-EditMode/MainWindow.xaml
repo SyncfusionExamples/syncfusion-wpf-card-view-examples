@@ -1,0 +1,103 @@
+﻿<Window x:Class="CardView_EditMode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
+        xmlns:local="clr-namespace:CardView_EditMode"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="CardView - Edit mode" Height="450" Width="500">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <syncfusion:CardView CanEdit="True"
+                                 Name="cardView" 
+                                 ItemsSource="{Binding CardViewItems}"
+                                 Margin="10">
+            <syncfusion:CardView.EditItemTemplate>
+                <DataTemplate>
+                    <ListBox>
+                        <ListBoxItem HorizontalContentAlignment="Stretch">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Name:"/>
+                                <TextBox Grid.Column="1"
+                                             Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+                            </Grid>
+                        </ListBoxItem>
+                        <ListBoxItem HorizontalContentAlignment="Stretch">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Age:"/>
+                                <TextBox  Grid.Column="1"  
+                                  Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}"/>
+                            </Grid>
+                        </ListBoxItem>
+                    </ListBox>
+                </DataTemplate>
+            </syncfusion:CardView.EditItemTemplate>
+            <syncfusion:CardView.ItemTemplate>
+                <DataTemplate>
+                    <ListBox>
+                        <ListBoxItem HorizontalContentAlignment="Stretch">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Name:"/>
+                                <TextBlock Grid.Column="1"    
+                                               Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+                            </Grid>
+                        </ListBoxItem>
+                        <ListBoxItem HorizontalContentAlignment="Stretch">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Age:"/>
+                                <TextBlock  Grid.Column="1"
+                                              Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}"/>
+                            </Grid>
+                        </ListBoxItem>
+                    </ListBox>
+                </DataTemplate>
+            </syncfusion:CardView.ItemTemplate>
+            <syncfusion:CardView.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </syncfusion:CardView.HeaderTemplate>
+        </syncfusion:CardView>
+        <GroupBox Header="EditMode"
+                  Grid.Column="1" 
+                  Margin="20"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
+            <StackPanel>
+                <Button Command="{Binding BeginEditCommand}" 
+                        CommandParameter="{Binding ElementName=cardView}" 
+                        Content="Begin Edit"
+                        Height="25" 
+                        Margin="5"/>
+                <Button Command="{Binding EndEditCommand}" 
+                        CommandParameter="{Binding ElementName=cardView}"
+                        Content="End Edit" 
+                        Height="25" 
+                        Margin="5"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

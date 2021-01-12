@@ -6,7 +6,7 @@
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
         xmlns:local="clr-namespace:CardView_EditMode"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="CardView - Edit mode" Height="450" Width="500">
+        Title="CardView - Edit mode" Height="450" Width="700">
     <Window.DataContext>
         <local:ViewModel/>
     </Window.DataContext>

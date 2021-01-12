@@ -23,6 +23,7 @@ namespace CardView_EditMode
         public MainWindow()
         {
             InitializeComponent();
+            cardView.GroupCards("Age");
         }
     }
 }

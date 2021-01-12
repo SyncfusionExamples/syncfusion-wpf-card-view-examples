@@ -7,7 +7,7 @@ namespace CardView_EditMode
 {
     public class ViewModel : NotificationObject
     {
-        private ObservableCollection<CardViewModel> cardViewItems
+        private ObservableCollection<CardViewModel> cardViewItems;
         public ICommand BeginEditCommand { get; }
         public ICommand EndEditCommand { get; }
         public ObservableCollection<CardViewModel> CardViewItems
@@ -35,6 +35,8 @@ namespace CardView_EditMode
             CardViewItems.Add(new CardViewModel() { Name = "John", Age = 23 });
             CardViewItems.Add(new CardViewModel() { Name = "Mark", Age = 26 });
             CardViewItems.Add(new CardViewModel() { Name = "Steven", Age = 25 });
+            CardViewItems.Add(new CardViewModel() { Name = "Smith", Age = 23 });
+            CardViewItems.Add(new CardViewModel() { Name = "Cena", Age = 26 });
         }
         public ViewModel()
         {

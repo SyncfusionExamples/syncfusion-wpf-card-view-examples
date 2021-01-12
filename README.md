@@ -40,6 +40,7 @@ This repository contains the samples that demonstrate the functionalities of WPF
   <td><a href="Samples/Editing"</a>Nested grouping of CardViewItems</td>
  </tr>
  <tr>  
+  <td><a href="Samples/CardView-EditMode">Group the cards programmatically</a></td>
   <td><a href="Samples/Editing">Sort the CardViewItems</a></td>
   <td><a href="Samples/Editing">Sort the grouped CardViewItems</a></td>
  </tr>

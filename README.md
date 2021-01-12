@@ -22,10 +22,10 @@ This repository contains the samples that demonstrate the functionalities of WPF
   <td><a href="Samples/CustomUI"</a>Custom UI for CardViewItem content</td>
   </tr>
  <tr>  
-  <td><a href="Samples/CustomUI"></a>Custom UI for edit mode CardViewItem</td>
-  <td><a href="Samples/Specific-CustomUI"></a>Different UI styles for specific CardViewItem</td>
-  <td><a href="Samples/Editing"></a>Change flow direction</td>
-  <td><a href="Samples/Themes"</a>Theme</td>
+  <td><a href="Samples/CustomUI">Custom UI for edit mode CardViewItem</a></td>
+  <td><a href="Samples/Specific-CustomUI">Different UI styles for specific CardViewItem</a></td>
+  <td><a href="Samples/Editing">Change flow direction</a></td>
+  <td><a href="Samples/Themes">Theme</a></td>
  </tr>
  <tr>  
   <td><a href="Samples/Editing">Enable/disable the grouping, sorting and editing mode</a></td>

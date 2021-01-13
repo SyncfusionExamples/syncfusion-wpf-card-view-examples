@@ -24,6 +24,7 @@ namespace CardView_EditMode
         {
             InitializeComponent();
             cardView.GroupCards("Age");
+            cardView.GroupCards("FirstName");
         }
     }
 }
